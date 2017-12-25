@@ -1,0 +1,18 @@
+<div *ngIf="!title;">
+    <form [formGroup]="rForm" (ngSubmit)="addPost(rForm.value)">
+      <div class="form-container">
+        <div class="row columns">
+          <h1>User Posts</h1>
+          <label>Title
+            <input type="text" formControlName="title">
+          </label>
+  
+          <label>Body
+            <textarea  formControlName="body"></textarea>
+          </label>
+
+          <input type="submit" class="button expanded" value="Submit Form" [disabled]="!rForm.valid">
+        </div>
+      </div>
+    </form>
+  </div>

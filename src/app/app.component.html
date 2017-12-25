@@ -1,0 +1,12 @@
+  <mat-toolbar color="primary">
+    <span><button style="color:#fff;" mat-menu-item [routerLink]="['contact']"> MG </button></span>
+    <!-- This fills the remaining space of the current row -->
+    <span class="example-fill-remaining-space"></span>
+    <span><a mat-button [routerLink]="['user']" routerLinkActive="active">Users</a></span>
+    <span><a mat-button [routerLink]="['posts']" routerLinkActive="active">Posts</a></span>
+    <button mat-button [matMenuTriggerFor]="appMenu"><mat-icon>menu</mat-icon> Menu</button>
+  </mat-toolbar>
+  <mat-menu #appMenu="matMenu">
+      <button mat-menu-item [routerLink]="['contact']"> Contact </button>
+  </mat-menu>
+<router-outlet></router-outlet>
